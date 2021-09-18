@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EmotionalCalendar.Backend.WebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.UserController.GetAllUsers">
+            <summary>
+            Получить список всех пользователей
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.UserController.GetCurrentUserInfo">
+            <summary>
+            Получить информацию о текущем пользователе
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.UserController.CreateUser(EmotionalCalendar.Backend.Models.ApplicationUserModels.ApplicationUserDTO)">
+            <summary>
+            Создать нового пользователя
+            </summary>
+            <param name="userDto">Данные пользователя</param>
+            <returns>Созданного пользователя</returns>
+        </member>
+    </members>
+</doc>

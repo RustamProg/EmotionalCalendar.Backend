@@ -15,9 +15,19 @@ namespace EmotionalCalendar.Backend.Models.ApplicationUserModels
         }
     }
 
+    /// <summary>
+    /// Перечисление ролей
+    /// </summary>
     public enum RoleEnum
     {
+        /// <summary>
+        /// Администратор
+        /// </summary>
         Admin,
+
+        /// <summary>
+        /// Обычный юзер
+        /// </summary>
         User
     }
 }

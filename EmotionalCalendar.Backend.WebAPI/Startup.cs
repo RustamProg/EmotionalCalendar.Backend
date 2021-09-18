@@ -15,6 +15,8 @@ using System.Threading.Tasks;
 using EmotionalCalendar.Backend.Constracts.ApplicationUserContracts;
 using EmotionalCalendar.Backend.WebAPI.Domain.ApplicationUserDomain;
 using EmotionalCalendar.Backend.WebAPI.Middlewares;
+using MediatR;
+using EmotionalCalendar.Backend.WebAPI.Config;
 
 namespace EmotionalCalendar.Backend.WebAPI
 {
@@ -37,11 +39,10 @@ namespace EmotionalCalendar.Backend.WebAPI
             services.AddControllers();
 
             services.AddScoped<IUserService, UserService>();
-            
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmotionalCalendar.Backend.WebAPI", Version = "v1" });
-            });
+
+            services.AddMediatR(typeof(Startup).Assembly);
+            services.AddAutoMapper(typeof(Startup).Assembly);
+            services.AddSwagger();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
