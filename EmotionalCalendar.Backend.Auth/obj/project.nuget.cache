@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "Wlzi2lzBB7MLiTCk3xwP+IdUGhk9v2qDvPfskYdygWLFCwPUkOrEVgjnRpKKqMnOehGLsZswudlOedNOJyauZA==",
+  "success": true,
+  "projectFilePath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Auth\\EmotionalCalendar.Backend.Auth.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\gabdu\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabdu\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabdu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\gabdu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}

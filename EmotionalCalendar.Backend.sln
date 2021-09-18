@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31229.75
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalCalendar.Backend.WebAPI", "EmotionalCalendar.Backend.WebAPI\EmotionalCalendar.Backend.WebAPI.csproj", "{1B2856DA-C478-4A73-A406-FC0E0E083A6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalCalendar.Backend.Auth", "EmotionalCalendar.Backend.Auth\EmotionalCalendar.Backend.Auth.csproj", "{AF988263-5DEA-496D-A4F4-E35F1B99A8C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalCalendar.Backend.Notifications", "EmotionalCalendar.Backend.Notifications\EmotionalCalendar.Backend.Notifications.csproj", "{6E1BC789-38C4-462C-ADF3-6AB8B82F7DE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalCalendar.Backend.Models", "EmotionalCalendar.Backend.Models\EmotionalCalendar.Backend.Models.csproj", "{733CA510-ECE7-4279-A950-31C3DBFE836E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalCalendar.Backend.Constracts", "EmotionalCalendar.Backend.Constracts\EmotionalCalendar.Backend.Constracts.csproj", "{A090045B-176D-4880-999F-F94878B8B265}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmotionalCalendar.Backend.AppDbContext", "EmotionalCalendar.Backend.AppDbContext\EmotionalCalendar.Backend.AppDbContext.csproj", "{319E0B26-4D3C-43FB-91B8-AB035BD8E088}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B2856DA-C478-4A73-A406-FC0E0E083A6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B2856DA-C478-4A73-A406-FC0E0E083A6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B2856DA-C478-4A73-A406-FC0E0E083A6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B2856DA-C478-4A73-A406-FC0E0E083A6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF988263-5DEA-496D-A4F4-E35F1B99A8C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF988263-5DEA-496D-A4F4-E35F1B99A8C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF988263-5DEA-496D-A4F4-E35F1B99A8C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF988263-5DEA-496D-A4F4-E35F1B99A8C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E1BC789-38C4-462C-ADF3-6AB8B82F7DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E1BC789-38C4-462C-ADF3-6AB8B82F7DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E1BC789-38C4-462C-ADF3-6AB8B82F7DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E1BC789-38C4-462C-ADF3-6AB8B82F7DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{733CA510-ECE7-4279-A950-31C3DBFE836E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733CA510-ECE7-4279-A950-31C3DBFE836E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733CA510-ECE7-4279-A950-31C3DBFE836E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733CA510-ECE7-4279-A950-31C3DBFE836E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A090045B-176D-4880-999F-F94878B8B265}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A090045B-176D-4880-999F-F94878B8B265}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A090045B-176D-4880-999F-F94878B8B265}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A090045B-176D-4880-999F-F94878B8B265}.Release|Any CPU.Build.0 = Release|Any CPU
+		{319E0B26-4D3C-43FB-91B8-AB035BD8E088}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319E0B26-4D3C-43FB-91B8-AB035BD8E088}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319E0B26-4D3C-43FB-91B8-AB035BD8E088}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319E0B26-4D3C-43FB-91B8-AB035BD8E088}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80E7A5BD-B170-4CFA-871A-FC2682A2CE12}
+	EndGlobalSection
+EndGlobal

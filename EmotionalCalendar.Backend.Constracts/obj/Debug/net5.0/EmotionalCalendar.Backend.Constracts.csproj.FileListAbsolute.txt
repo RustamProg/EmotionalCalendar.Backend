@@ -1,0 +1,15 @@
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\EmotionalCalendar.Backend.Constracts.deps.json
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\EmotionalCalendar.Backend.Constracts.dll
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\ref\EmotionalCalendar.Backend.Constracts.dll
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\EmotionalCalendar.Backend.Constracts.pdb
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.csprojAssemblyReference.cache
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.AssemblyInfoInputs.cache
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.AssemblyInfo.cs
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.csproj.CoreCompileInputs.cache
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.dll
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\ref\EmotionalCalendar.Backend.Constracts.dll
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.pdb
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\EmotionalCalendar.Backend.Models.dll
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\EmotionalCalendar.Backend.Models.pdb
+C:\RiderProjects\EmotionalCalendar\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\obj\Debug\net5.0\EmotionalCalendar.Backend.Constracts.csproj.CopyComplete
