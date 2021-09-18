@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Wlzi2lzBB7MLiTCk3xwP+IdUGhk9v2qDvPfskYdygWLFCwPUkOrEVgjnRpKKqMnOehGLsZswudlOedNOJyauZA==",
+  "dgSpecHash": "mz+S9RIdqGHPWbKauKxvY7hq/xIFX4aFRZOf0IMwbArzXCg/N1EOYTwhHVX9f36VVNiWT5c1BlbPbYcsS0ASMw==",
   "success": true,
-  "projectFilePath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Auth\\EmotionalCalendar.Backend.Auth.csproj",
+  "projectFilePath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Auth\\EmotionalCalendar.Backend.Auth.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

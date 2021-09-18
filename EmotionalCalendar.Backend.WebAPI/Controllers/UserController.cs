@@ -23,7 +23,10 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
         [HttpGet]
         public IActionResult GetAllUsers()
         {
-            return Ok();
+            var result = _dbContext.ApplicationUsers
+                .ToDictionary(p => p.Id);
+
+            return Ok(result);
         }
 
         [HttpGet("info")]
@@ -52,22 +55,8 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
             };
 
             _dbContext.ApplicationUsers.Add(newUser);
+            _dbContext.SaveChanges();
             return Ok(newUser);
-        }
-
-        [HttpPut]
-        public IActionResult SetCurrentUser(string username)
-        {
-            var user = _dbContext.ApplicationUsers
-                .FirstOrDefault(x => x.Username == username);
-
-            if (user is null)
-            {
-                throw new Exception($"User '{username}' doesn't exist");
-            }
-
-            _userService.User = user;
-            return Ok(user);
         }
     }
 }

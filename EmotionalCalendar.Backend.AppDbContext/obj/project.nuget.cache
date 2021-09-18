@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "So0m2mFl+51Bcu5T0lOQufIcK5woan15RSBmxolLkPwc7OB9gb60AwbYswVvIgx3lHGsKrIip6EugvbIH27WEg==",
+  "dgSpecHash": "wrL3XDvXgobK+gH/TWN6qiMXdMOFjPiKJtv8avb0JksZgg2VpkXJTQagXmY9HntGs+hJSo0X9yO2Nqz9Jjj5Dw==",
   "success": true,
-  "projectFilePath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.AppDbContext\\EmotionalCalendar.Backend.AppDbContext.csproj",
+  "projectFilePath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.AppDbContext\\EmotionalCalendar.Backend.AppDbContext.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
     "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",

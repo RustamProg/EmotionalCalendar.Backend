@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Models\\EmotionalCalendar.Backend.Models.csproj",
+      "projectUniqueName": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Models\\EmotionalCalendar.Backend.Models.csproj",
       "projectName": "EmotionalCalendar.Backend.Models",
-      "projectPath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Models\\EmotionalCalendar.Backend.Models.csproj",
+      "projectPath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Models\\EmotionalCalendar.Backend.Models.csproj",
       "packagesPath": "C:\\Users\\gabdu\\.nuget\\packages\\",
-      "outputPath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Models\\obj\\",
+      "outputPath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Models\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabdu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

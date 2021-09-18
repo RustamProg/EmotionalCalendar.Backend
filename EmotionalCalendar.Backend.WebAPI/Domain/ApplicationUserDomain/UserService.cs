@@ -9,18 +9,12 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.ApplicationUserDomain
     public class UserService : IUserService
     {
         public ApplicationUser User { get; set; }
-        private readonly ApplicationDbContext _dbContext;
         
-        public UserService(ApplicationDbContext dbContext)
+        public UserService()
         {
-            _dbContext = dbContext;
+
         }
 
-        private void InitalizeDefaultUser()
-        {
-            
-        }
-        
         public string GetFullName()
         {
             var result = new StringBuilder();

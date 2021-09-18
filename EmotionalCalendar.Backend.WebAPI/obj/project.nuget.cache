@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5vd6V/CiGiGq9TALh0pBkzMB6GfsSN5ohkJPD/A8Y+Bxa32HOKqj9Q1hG2Z30ljH0pysDG5YDGnHT9xcpnNVeg==",
+  "dgSpecHash": "h6sCcMWMlqRLAIu3NAwPGTQkVkAQDXKmXWip4RwGxMaAX14F8/bNJXOhsAzHPa0PFq55dxc4IXuEKXU7yKbbvQ==",
   "success": true,
-  "projectFilePath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\EmotionalCalendar.Backend.WebAPI.csproj",
+  "projectFilePath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\EmotionalCalendar.Backend.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gabdu\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gabdu\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

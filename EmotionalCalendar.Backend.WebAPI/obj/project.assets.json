@@ -6039,11 +6039,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\EmotionalCalendar.Backend.WebAPI.csproj",
+      "projectUniqueName": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\EmotionalCalendar.Backend.WebAPI.csproj",
       "projectName": "EmotionalCalendar.Backend.WebAPI",
-      "projectPath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\EmotionalCalendar.Backend.WebAPI.csproj",
+      "projectPath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\EmotionalCalendar.Backend.WebAPI.csproj",
       "packagesPath": "C:\\Users\\gabdu\\.nuget\\packages\\",
-      "outputPath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\obj\\",
+      "outputPath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gabdu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6060,11 +6060,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.AppDbContext\\EmotionalCalendar.Backend.AppDbContext.csproj": {
-              "projectPath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.AppDbContext\\EmotionalCalendar.Backend.AppDbContext.csproj"
+            "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.AppDbContext\\EmotionalCalendar.Backend.AppDbContext.csproj": {
+              "projectPath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.AppDbContext\\EmotionalCalendar.Backend.AppDbContext.csproj"
             },
-            "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Constracts\\EmotionalCalendar.Backend.Constracts.csproj": {
-              "projectPath": "C:\\RiderProjects\\EmotionalCalendar\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Constracts\\EmotionalCalendar.Backend.Constracts.csproj"
+            "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Constracts\\EmotionalCalendar.Backend.Constracts.csproj": {
+              "projectPath": "D:\\Kpo\\Secret\\EmotionalCalendar.Backend\\EmotionalCalendar.Backend.Constracts\\EmotionalCalendar.Backend.Constracts.csproj"
             }
           }
         }
@@ -6122,7 +6122,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files (x86)\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

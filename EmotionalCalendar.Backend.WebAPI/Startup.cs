@@ -14,6 +14,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using EmotionalCalendar.Backend.Constracts.ApplicationUserContracts;
 using EmotionalCalendar.Backend.WebAPI.Domain.ApplicationUserDomain;
+using EmotionalCalendar.Backend.WebAPI.Middlewares;
 
 namespace EmotionalCalendar.Backend.WebAPI
 {
@@ -32,9 +33,10 @@ namespace EmotionalCalendar.Backend.WebAPI
             services.AddDbContext<ApplicationDbContext>(options => 
                 options.UseSqlServer(Configuration.GetConnectionString("MainConnection"),
                 b => b.MigrationsAssembly("EmotionalCalendar.Backend.WebAPI")));
+
             services.AddControllers();
 
-            services.AddSingleton<IUserService, UserService>();
+            services.AddScoped<IUserService, UserService>();
             
             services.AddSwaggerGen(c =>
             {
@@ -55,6 +57,10 @@ namespace EmotionalCalendar.Backend.WebAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ExceptionMiddleware>();
+
+            app.UseMiddleware<UserMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
