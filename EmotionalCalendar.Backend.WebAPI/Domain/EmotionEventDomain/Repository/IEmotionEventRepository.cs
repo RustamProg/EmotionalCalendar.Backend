@@ -8,12 +8,23 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
 {
     public interface IEmotionEventRepository
     {
-        Task<IEnumerable<Emotion>> GetAllEmotions();
-        Task<IEnumerable<DailyEmotion>> GetAllDailyEmotions();
-        Task<IEnumerable<DailyEmotion>> GetDailyEmotionsByUserId(Guid userId);
-        Task<IEnumerable<EventNote>> GetAllEventNotes();
-        Task AddEmotion(Emotion emotion);
-        Task AddEventNote(EventNote eventNote);
-        Task AddDailyEmotion(DailyEmotion dailyEmotion);
+        Task<IEnumerable<Emotion>> GetAllEmotionsAsync();
+        Task<Emotion> GetEmotionByIdAsync(long emotionId);
+        Task<Emotion> GetEmotionByNameAsync(string emotionName);
+        Task<IEnumerable<DailyEmotion>> GetAllDailyEmotionsAsync();
+        Task<IEnumerable<DailyEmotion>> GetDailyEmotionsByUserIdAsync(Guid userId);
+        Task<DailyEmotion> GetDailyEmotionByIdAsync(long dailyEmotionId);
+        Task<IEnumerable<EventNote>> GetAllEventNotesAsync();
+        Task<EventNote> GetEventNoteByIdAsync(long eventNoteId);
+        Task AddEmotionAsync(Emotion emotion);
+        Task AddEventNoteAsync(EventNote eventNote);
+        Task AddDailyEmotionAsync(DailyEmotion dailyEmotion);
+        Task UpdateEmotionAsync(Emotion emotion);
+        Task UpdateEventNoteAsync(EventNote eventNote);
+        Task UpdateDailyEmotionAsync(DailyEmotion dailyEmotion);
+        Task DeleteEmotionAsync(long emotionId);
+        Task DeleteEventNoteAsync(long eventNoteId);
+        Task DeleteDailyEmotionAsync(long dailyEmotionId);
+        Task<IEnumerable<T>> GetWhereAsync<T>(Func<T, bool> predicate) where T : class;
     }
 }

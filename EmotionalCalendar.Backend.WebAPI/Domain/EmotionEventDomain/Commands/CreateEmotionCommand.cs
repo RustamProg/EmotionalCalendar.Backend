@@ -34,7 +34,7 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
             }
 
             var emotion = _mapper.Map<Emotion>(request.EmotionDTO);
-            await _emotionEventRepository.AddEmotion(emotion);
+            await _emotionEventRepository.AddEmotionAsync(emotion);
 
             return Unit.Value;
         }

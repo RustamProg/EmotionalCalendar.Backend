@@ -13,7 +13,20 @@ namespace EmotionalCalendar.Backend.AppDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base (options)
         {
+            
+        }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DailyEmotion>()
+                .HasOne(p => p.Emotion)
+                .WithMany(t => t.DailyEmotions)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<DailyEmotion>()
+                .HasOne(p => p.EventNote)
+                .WithMany(t => t.DailyEmotions)
+                .OnDelete(DeleteBehavior.Cascade);
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }

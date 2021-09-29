@@ -45,5 +45,17 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
             var command = new CreateEmotionCommand { EmotionDTO = emotionDTO };
             await _mediator.Send(command);
         }
+
+        /// <summary>
+        /// Удалить эмоцию из справочника
+        /// </summary>
+        /// <param name="emotionId">ID эмоции</param>
+        /// <returns></returns>
+        [HttpDelete("{emotionId}")]
+        public async Task DeleteEmotion(long emotionId)
+        {
+            var command = new DeleteEmotionCommand { EmotionId = emotionId };
+            await _mediator.Send(command);
+        }
     }
 }

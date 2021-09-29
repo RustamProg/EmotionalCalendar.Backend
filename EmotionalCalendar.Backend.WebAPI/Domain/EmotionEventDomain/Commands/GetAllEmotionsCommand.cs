@@ -24,7 +24,7 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
 
         public async Task<IEnumerable<Emotion>> Handle(GetAllEmotionsCommand request, CancellationToken cancellationToken)
         {
-            var emotions = await _emotionEventRepository.GetAllEmotions();
+            var emotions = await _emotionEventRepository.GetAllEmotionsAsync();
             return emotions;
         }
     }

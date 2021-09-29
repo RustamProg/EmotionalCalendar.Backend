@@ -4,14 +4,16 @@ using EmotionalCalendar.Backend.AppDbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmotionalCalendar.Backend.WebAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210929180227_EnableManyToMany")]
+    partial class EnableManyToMany
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -122,13 +124,11 @@ namespace EmotionalCalendar.Backend.WebAPI.Migrations
                 {
                     b.HasOne("EmotionalCalendar.Backend.Models.EmotionEventModels.Emotion", "Emotion")
                         .WithMany("DailyEmotions")
-                        .HasForeignKey("EmotionId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("EmotionId");
 
                     b.HasOne("EmotionalCalendar.Backend.Models.EmotionEventModels.EventNote", "EventNote")
                         .WithMany("DailyEmotions")
-                        .HasForeignKey("EventNoteId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("EventNoteId");
 
                     b.Navigation("Emotion");
 

@@ -22,7 +22,8 @@ namespace EmotionalCalendar.Backend.WebAPI.Config
                 Required = true,
                 Schema = new OpenApiSchema
                 {
-                    Type = "string"
+                    Type = "string",
+                    Default = new OpenApiString("chell")
                 }
             });
         }
