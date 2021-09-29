@@ -14,7 +14,6 @@ D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\bin\Deb
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\bin\Debug\net5.0\EmotionalCalendar.Backend.Models.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\bin\Debug\net5.0\ref\EmotionalCalendar.Backend.Models.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\bin\Debug\net5.0\EmotionalCalendar.Backend.Models.pdb
-D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.csprojAssemblyReference.cache
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.GeneratedMSBuildEditorConfig.editorconfig
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.AssemblyInfoInputs.cache
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.AssemblyInfo.cs
@@ -22,3 +21,4 @@ D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Deb
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\ref\EmotionalCalendar.Backend.Models.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.pdb
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Models\obj\Debug\net5.0\EmotionalCalendar.Backend.Models.csprojAssemblyReference.cache

@@ -4,6 +4,24 @@
         <name>EmotionalCalendar.Backend.WebAPI</name>
     </assembly>
     <members>
+        <member name="T:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController">
+            <summary>
+            Управление эмоциями (справочник)
+            </summary>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController.GetAllEmotions">
+            <summary>
+            Получить весь справочник эмоций
+            </summary>
+            <returns>Справочник эмоций</returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController.CreateEmotion(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionDTO)">
+            <summary>
+            Создать эмоцию
+            </summary>
+            <param name="emotionDTO">Данные об эмоции</param>
+            <returns></returns>
+        </member>
         <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.UserController.GetAllUsers">
             <summary>
             Получить список всех пользователей

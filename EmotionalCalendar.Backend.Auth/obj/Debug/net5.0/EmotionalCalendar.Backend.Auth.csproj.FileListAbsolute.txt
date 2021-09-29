@@ -40,7 +40,6 @@ D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\bin\Debug
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.csprojAssemblyReference.cache
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.GeneratedMSBuildEditorConfig.editorconfig
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.AssemblyInfoInputs.cache
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.AssemblyInfo.cs
@@ -56,3 +55,4 @@ D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\ref\EmotionalCalendar.Backend.Auth.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.pdb
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.genruntimeconfig.cache
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Auth\obj\Debug\net5.0\EmotionalCalendar.Backend.Auth.csprojAssemblyReference.cache

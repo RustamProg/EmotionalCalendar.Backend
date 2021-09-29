@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace EmotionalCalendar.Backend.WebAPI.Controllers
 {
     [ApiController]
-    [Route("user")]
+    [Route("api/user")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
