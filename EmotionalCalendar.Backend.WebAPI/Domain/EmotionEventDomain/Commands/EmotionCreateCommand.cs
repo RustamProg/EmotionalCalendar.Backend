@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using EmotionalCalendar.Backend.Models.EmotionEventModels;
+using EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository;
 using MediatR;
 using System;
@@ -10,30 +11,30 @@ using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
 {
-    public class CreateEmotionCommand : IRequest
+    public class EmotionCreateCommand : IRequest
     {
-        public EmotionDTO EmotionDTO { get; set; }
+        public EmotionCreateRequest EmotionRequest { get; set; }
     }
 
-    public class CreateEmotionCommandHandler : IRequestHandler<CreateEmotionCommand>
+    public class EmotionCreateCommandHandler : IRequestHandler<EmotionCreateCommand>
     {
         private readonly IEmotionEventRepository _emotionEventRepository;
         private readonly IMapper _mapper;
 
-        public CreateEmotionCommandHandler(IEmotionEventRepository emotionEventRepository, IMapper mapper)
+        public EmotionCreateCommandHandler(IEmotionEventRepository emotionEventRepository, IMapper mapper)
         {
             _emotionEventRepository = emotionEventRepository;
             _mapper = mapper;
         }
 
-        public async Task<Unit> Handle(CreateEmotionCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(EmotionCreateCommand request, CancellationToken cancellationToken)
         {
             if (request is null)
             {
                 throw new ArgumentNullException(nameof(request));
             }
 
-            var emotion = _mapper.Map<Emotion>(request.EmotionDTO);
+            var emotion = _mapper.Map<Emotion>(request.EmotionRequest);
             await _emotionEventRepository.AddEmotionAsync(emotion);
 
             return Unit.Value;

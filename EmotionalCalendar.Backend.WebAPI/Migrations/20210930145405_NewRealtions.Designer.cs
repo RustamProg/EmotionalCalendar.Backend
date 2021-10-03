@@ -4,35 +4,22 @@ using EmotionalCalendar.Backend.AppDbContext;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmotionalCalendar.Backend.WebAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210930145405_NewRealtions")]
+    partial class NewRealtions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.10")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("EmotionEventNote", b =>
-                {
-                    b.Property<long>("EmotionsId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("EventNotesId")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("EmotionsId", "EventNotesId");
-
-                    b.HasIndex("EventNotesId");
-
-                    b.ToTable("EmotionEventNote");
-                });
 
             modelBuilder.Entity("EmotionalCalendar.Backend.Models.ApplicationUserModels.ApplicationUser", b =>
                 {
@@ -70,6 +57,9 @@ namespace EmotionalCalendar.Backend.WebAPI.Migrations
                     b.Property<string>("DisplayName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<long?>("EventNoteId")
+                        .HasColumnType("bigint");
+
                     b.Property<int>("GreenColor")
                         .HasColumnType("int");
 
@@ -80,6 +70,8 @@ namespace EmotionalCalendar.Backend.WebAPI.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EventNoteId");
 
                     b.HasIndex("Name")
                         .IsUnique()
@@ -98,33 +90,24 @@ namespace EmotionalCalendar.Backend.WebAPI.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Title")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
                     b.ToTable("EventNotes");
                 });
 
-            modelBuilder.Entity("EmotionEventNote", b =>
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.Emotion", b =>
                 {
-                    b.HasOne("EmotionalCalendar.Backend.Models.EmotionEventModels.Emotion", null)
-                        .WithMany()
-                        .HasForeignKey("EmotionsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("EmotionalCalendar.Backend.Models.EmotionEventModels.EventNote", null)
-                        .WithMany()
-                        .HasForeignKey("EventNotesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .WithMany("Emotions")
+                        .HasForeignKey("EventNoteId");
+                });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.EventNote", b =>
+                {
+                    b.Navigation("Emotions");
                 });
 #pragma warning restore 612, 618
         }

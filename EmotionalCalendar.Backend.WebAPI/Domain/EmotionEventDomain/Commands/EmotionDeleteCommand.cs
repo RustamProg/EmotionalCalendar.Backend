@@ -8,21 +8,21 @@ using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
 {
-    public class DeleteEmotionCommand : IRequest
+    public class EmotionDeleteCommand : IRequest
     {
         public long EmotionId { get; set; }
     }
 
-    public class DeleteEmotionCommandHandler : IRequestHandler<DeleteEmotionCommand>
+    public class EmotionDeleteCommandHandler : IRequestHandler<EmotionDeleteCommand>
     {
         private readonly IEmotionEventRepository _emotionEventRepository;
 
-        public DeleteEmotionCommandHandler(IEmotionEventRepository emotionEventRepository)
+        public EmotionDeleteCommandHandler(IEmotionEventRepository emotionEventRepository)
         {
             _emotionEventRepository = emotionEventRepository;
         }
 
-        public async Task<Unit> Handle(DeleteEmotionCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(EmotionDeleteCommand request, CancellationToken cancellationToken)
         {
             if (request is null)
             {

@@ -4,144 +4,100 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
 {
     public class EmotionEventRepository : IEmotionEventRepository
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly ApplicationDbContext _context;
 
-        public EmotionEventRepository(ApplicationDbContext dbContext)
+        public EmotionEventRepository(ApplicationDbContext context)
         {
-            _dbContext = dbContext;
-        }
-
-        public async Task AddDailyEmotionAsync(DailyEmotion dailyEmotion)
-        {
-            if (dailyEmotion.EmotionRate > 100 || dailyEmotion.EmotionRate < 1)
-            {
-                throw new Exception($"Значение эмоции может быть только от 1 до 100 включительно");
-            }
-
-            await _dbContext.DailyEmotions.AddAsync(dailyEmotion);
-            await _dbContext.SaveChangesAsync();
+            _context = context;
         }
 
         public async Task AddEmotionAsync(Emotion emotion)
         {
-            await CheckEmotionExistanceAsync(emotion);
-            await _dbContext.Emotions.AddAsync(emotion);
-            await _dbContext.SaveChangesAsync();
+            await _context.Emotions.AddAsync(emotion);
+            await _context.SaveChangesAsync();
         }
 
-        public async Task AddEventNoteAsync(EventNote eventNote)
+        public async Task AddEventNoteWithEmotionAsync(EventNote eventNote)
         {
-            await _dbContext.EventNotes.AddAsync(eventNote);
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task DeleteDailyEmotionAsync(long dailyEmotionId)
-        {
-            await Task.Run(() => _dbContext.DailyEmotions.Remove(new DailyEmotion { Id = dailyEmotionId }));
-            await _dbContext.SaveChangesAsync();
+            await _context.EventNotes.AddAsync(eventNote);
+            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteEmotionAsync(long emotionId)
         {
-            await Task.Run(() => _dbContext.Emotions.Remove(new Emotion { Id = emotionId }));
-            await _dbContext.SaveChangesAsync();
+            await Task.Run(() =>_context.Emotions.Remove(new Emotion { Id = emotionId}));
+            await _context.SaveChangesAsync();
         }
 
         public async Task DeleteEventNoteAsync(long eventNoteId)
         {
-            await Task.Run(() => _dbContext.EventNotes.Remove(new EventNote { Id = eventNoteId }));
-            await _dbContext.SaveChangesAsync();
-        }
-
-        public async Task<IEnumerable<DailyEmotion>> GetAllDailyEmotionsAsync()
-        {
-            return await _dbContext.DailyEmotions
-                .Include(x => x.Emotion)
-                .Include(x => x.EventNote)
-                .ToListAsync();
+            await Task.Run(() => _context.EventNotes.Remove(new EventNote { Id = eventNoteId }));
+            await _context.SaveChangesAsync();
         }
 
         public async Task<IEnumerable<Emotion>> GetAllEmotionsAsync()
         {
-            return await _dbContext.Emotions.ToListAsync();
+            return await _context.Emotions.AsNoTracking().ToListAsync();
         }
 
         public async Task<IEnumerable<EventNote>> GetAllEventNotesAsync()
         {
-            return await _dbContext.EventNotes.ToListAsync();
-        }
-
-        public async Task<DailyEmotion> GetDailyEmotionByIdAsync(long dailyEmotionId)
-        {
-            return await _dbContext.DailyEmotions
-                .Include(x => x.Emotion)
-                .Include(x => x.EventNote)
-                .FirstAsync(x => x.Id == dailyEmotionId);
-        }
-
-        public async Task<IEnumerable<DailyEmotion>> GetDailyEmotionsByUserIdAsync(Guid userId)
-        {
-            var result = await _dbContext.DailyEmotions
-                .Include(x => x.Emotion)
-                .Include(x => x.EventNote)
-                .Where(x => x.UserId == userId)
-                .ToListAsync();
-
-            return result;
-        }
-
-        public async Task<IEnumerable<T>> GetWhereAsync<T>(Func<T, bool> predicate) where T : class
-        {
-            return await Task.Run(() => _dbContext.Set<T>().Where(predicate).ToList());
+            return await _context.EventNotes.AsNoTracking().ToListAsync();
         }
 
         public async Task<Emotion> GetEmotionByIdAsync(long emotionId)
         {
-            return await _dbContext.Emotions.FirstAsync(x => x.Id == emotionId);
+            return await _context.Emotions.FirstOrDefaultAsync(x => x.Id == emotionId);
         }
 
         public async Task<Emotion> GetEmotionByNameAsync(string emotionName)
         {
-            return await _dbContext.Emotions.FirstAsync(x => x.Name == emotionName);
+            return await _context.Emotions.AsNoTracking().FirstOrDefaultAsync(x => x.Name == emotionName);
         }
 
-        public async Task<EventNote> GetEventNoteByIdAsync(long eventNoteId)
+        public Task<EventNote> GetEventNoteByIdAsync(long eventNoteId)
         {
-            return await _dbContext.EventNotes.FirstAsync(x => x.Id == eventNoteId);
+            throw new NotImplementedException();
         }
 
-        public Task UpdateDailyEmotionAsync(DailyEmotion dailyEmotion)
+        public async Task<IEnumerable<EventNote>> GetEventNotesWithEmotions()
+        {
+            return await _context.EventNotes
+                .AsNoTracking()
+                .Include(x => x.Emotions)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<EventNote>> GetEventNotesWithEmotionsByUserId(Guid userId)
+        {
+            return await _context.EventNotes
+                .AsNoTracking()
+                .Include(x => x.Emotions)
+                .Where(x => x.UserId == userId)
+                .ToListAsync();
+        }
+
+        public Task<IEnumerable<T>> GetWhereAsync<T>(Func<T, bool> predicate) where T : class
         {
             throw new NotImplementedException();
         }
 
         public async Task UpdateEmotionAsync(Emotion emotion)
         {
-            await Task.Run(() => _dbContext.Emotions.Update(emotion));
+            await Task.Run(() => _context.Emotions.Update(emotion));
+            await _context.SaveChangesAsync();
         }
 
-        public Task UpdateEventNoteAsync(EventNote eventNote)
+        public async Task UpdateEventNoteWithEmotionAsync(EventNote eventNote)
         {
-            throw new NotImplementedException();
-        }
-
-        private async Task CheckEmotionExistanceAsync(Emotion emotion)
-        {
-            var emotionNames = await _dbContext.Emotions
-                .ToDictionaryAsync(p => p.Name);
-
-            if (emotionNames.ContainsKey(emotion.Name))
-            {
-                throw new Exception(
-                    $"Эмоция \"{emotion.Name}\" с названием \"{emotion.DisplayName}\" и RGB = ({emotion.RedColor}, {emotion.GreenColor}, {emotion.BlueColor}) уже существует");
-            }
+            await Task.Run(() => _context.EventNotes.Update(eventNote));
+            await _context.SaveChangesAsync();
         }
     }
 }

@@ -11,20 +11,16 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
         Task<IEnumerable<Emotion>> GetAllEmotionsAsync();
         Task<Emotion> GetEmotionByIdAsync(long emotionId);
         Task<Emotion> GetEmotionByNameAsync(string emotionName);
-        Task<IEnumerable<DailyEmotion>> GetAllDailyEmotionsAsync();
-        Task<IEnumerable<DailyEmotion>> GetDailyEmotionsByUserIdAsync(Guid userId);
-        Task<DailyEmotion> GetDailyEmotionByIdAsync(long dailyEmotionId);
         Task<IEnumerable<EventNote>> GetAllEventNotesAsync();
         Task<EventNote> GetEventNoteByIdAsync(long eventNoteId);
+        Task<IEnumerable<EventNote>> GetEventNotesWithEmotions();
+        Task<IEnumerable<EventNote>> GetEventNotesWithEmotionsByUserId(Guid userId);
         Task AddEmotionAsync(Emotion emotion);
-        Task AddEventNoteAsync(EventNote eventNote);
-        Task AddDailyEmotionAsync(DailyEmotion dailyEmotion);
+        Task AddEventNoteWithEmotionAsync(EventNote eventNote);
         Task UpdateEmotionAsync(Emotion emotion);
-        Task UpdateEventNoteAsync(EventNote eventNote);
-        Task UpdateDailyEmotionAsync(DailyEmotion dailyEmotion);
+        Task UpdateEventNoteWithEmotionAsync(EventNote eventNote);
         Task DeleteEmotionAsync(long emotionId);
         Task DeleteEventNoteAsync(long eventNoteId);
-        Task DeleteDailyEmotionAsync(long dailyEmotionId);
         Task<IEnumerable<T>> GetWhereAsync<T>(Func<T, bool> predicate) where T : class;
     }
 }

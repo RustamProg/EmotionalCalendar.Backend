@@ -1,11 +1,9 @@
 ﻿using EmotionalCalendar.Backend.Models.EmotionEventModels;
+using EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands;
 using MediatR;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.WebAPI.Controllers
@@ -31,18 +29,30 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
         [HttpGet]
         public async Task<IEnumerable<Emotion>> GetAllEmotions()
         {
-            return await _mediator.Send(new GetAllEmotionsCommand());
+            return await _mediator.Send(new EmotionsGetAllCommand());
         }
 
         /// <summary>
         /// Создать эмоцию
         /// </summary>
-        /// <param name="emotionDTO">Данные об эмоции</param>
+        /// <param name="emotionRequest">Данные об эмоции</param>
         /// <returns></returns>
         [HttpPost]
-        public async Task CreateEmotion(EmotionDTO emotionDTO)
+        public async Task CreateEmotion(EmotionCreateRequest emotionRequest)
         {
-            var command = new CreateEmotionCommand { EmotionDTO = emotionDTO };
+            var command = new EmotionCreateCommand { EmotionRequest = emotionRequest };
+            await _mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Обновить эмоцию в справочнике
+        /// </summary>
+        /// <param name="emotionRequest">Новые данные об эмоции</param>
+        /// <returns></returns>
+        [HttpPut]
+        public async Task UpdateEmotion(EmotionUpdateRequest emotionRequest)
+        {
+            var command = new EmotionUpdateCommand { EmotionRequest = emotionRequest };
             await _mediator.Send(command);
         }
 
@@ -54,7 +64,7 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
         [HttpDelete("{emotionId}")]
         public async Task DeleteEmotion(long emotionId)
         {
-            var command = new DeleteEmotionCommand { EmotionId = emotionId };
+            var command = new EmotionDeleteCommand { EmotionId = emotionId };
             await _mediator.Send(command);
         }
     }

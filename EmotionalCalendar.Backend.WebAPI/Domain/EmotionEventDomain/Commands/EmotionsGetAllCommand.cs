@@ -9,20 +9,20 @@ using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
 {
-    public class GetAllEmotionsCommand : IRequest<IEnumerable<Emotion>>
+    public class EmotionsGetAllCommand : IRequest<IEnumerable<Emotion>>
     {
     }
 
-    public class GetAllEmotionsCommandHandler : IRequestHandler<GetAllEmotionsCommand, IEnumerable<Emotion>>
+    public class EmotionsGetAllCommandHandler : IRequestHandler<EmotionsGetAllCommand, IEnumerable<Emotion>>
     {
         private readonly IEmotionEventRepository _emotionEventRepository;
 
-        public GetAllEmotionsCommandHandler(IEmotionEventRepository emotionEventRepository)
+        public EmotionsGetAllCommandHandler(IEmotionEventRepository emotionEventRepository)
         {
             _emotionEventRepository = emotionEventRepository;
         }
 
-        public async Task<IEnumerable<Emotion>> Handle(GetAllEmotionsCommand request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<Emotion>> Handle(EmotionsGetAllCommand request, CancellationToken cancellationToken)
         {
             var emotions = await _emotionEventRepository.GetAllEmotionsAsync();
             return emotions;

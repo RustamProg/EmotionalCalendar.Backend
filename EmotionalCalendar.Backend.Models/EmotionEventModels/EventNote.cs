@@ -10,9 +10,10 @@ namespace EmotionalCalendar.Backend.Models.EmotionEventModels
     public class EventNote
     {
         public long Id { get; set; }
+        public Guid UserId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        [JsonIgnore]
-        public ICollection<DailyEmotion> DailyEmotions { get; set; }
+        public DateTime CreateDate { get; set; }
+        public ICollection<Emotion> Emotions { get; set; }
     }
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EmotionalCalendar.Backend.Models.EmotionEventModels
+namespace EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests
 {
-    public class EmotionDTO
+    public class EmotionCreateRequest
     {
         public string Name { get; set; }
         public string DisplayName { get; set; }

@@ -23,7 +23,7 @@ namespace EmotionalCalendar.Backend.WebAPI.Middlewares
             }
             catch (Exception ex)
             {
-                await context.Response.WriteAsync($"[Middleware Exception] {ex.Message} {ex.InnerException?.Message}");
+                await context.Response.WriteAsync($"[MiddlewareException] {ex.Message} {ex.InnerException?.Message}");
             }
         }
     }
