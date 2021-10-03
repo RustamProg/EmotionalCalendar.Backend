@@ -17,6 +17,9 @@ using EmotionalCalendar.Backend.WebAPI.Domain.ApplicationUserDomain;
 using EmotionalCalendar.Backend.WebAPI.Middlewares;
 using MediatR;
 using EmotionalCalendar.Backend.WebAPI.Config;
+using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository;
+using AutoMapper;
+using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain;
 
 namespace EmotionalCalendar.Backend.WebAPI
 {
@@ -39,9 +42,23 @@ namespace EmotionalCalendar.Backend.WebAPI
             services.AddControllers();
 
             services.AddScoped<IUserService, UserService>();
+            services.AddTransient<IEmotionEventRepository, EmotionEventRepository>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin();
+                    builder.AllowAnyHeader();
+                    builder.AllowAnyMethod();
+                });
+            });
 
             services.AddMediatR(typeof(Startup).Assembly);
-            services.AddAutoMapper(typeof(Startup).Assembly);
+            services.AddScoped(provider => new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile(new EmotionEventProfile(provider.GetService<IEmotionEventRepository>()));
+            }).CreateMapper());
             services.AddSwagger();
         }
 
@@ -56,6 +73,8 @@ namespace EmotionalCalendar.Backend.WebAPI
             }
 
             app.UseRouting();
+
+            app.UseCors("AllowAll");
 
             app.UseAuthorization();
 

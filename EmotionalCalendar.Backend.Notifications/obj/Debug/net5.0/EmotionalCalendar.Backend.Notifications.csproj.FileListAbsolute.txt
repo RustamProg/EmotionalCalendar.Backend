@@ -40,7 +40,6 @@ D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.csprojAssemblyReference.cache
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.GeneratedMSBuildEditorConfig.editorconfig
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.AssemblyInfoInputs.cache
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.AssemblyInfo.cs
@@ -56,3 +55,4 @@ D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\ref\EmotionalCalendar.Backend.Notifications.dll
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.pdb
 D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.genruntimeconfig.cache
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\obj\Debug\net5.0\EmotionalCalendar.Backend.Notifications.csprojAssemblyReference.cache

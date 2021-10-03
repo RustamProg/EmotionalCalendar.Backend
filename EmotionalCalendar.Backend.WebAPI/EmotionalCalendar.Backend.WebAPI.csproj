@@ -29,12 +29,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\EmotionalCalendar.Backend.AppDbContext\EmotionalCalendar.Backend.AppDbContext.csproj" />
     <ProjectReference Include="..\EmotionalCalendar.Backend.Constracts\EmotionalCalendar.Backend.Constracts.csproj" />
   </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
 
 </Project>

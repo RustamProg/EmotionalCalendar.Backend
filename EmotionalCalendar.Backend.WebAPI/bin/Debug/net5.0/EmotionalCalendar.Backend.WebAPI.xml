@@ -4,6 +4,70 @@
         <name>EmotionalCalendar.Backend.WebAPI</name>
     </assembly>
     <members>
+        <member name="T:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController">
+            <summary>
+            Контроллер для работы с ежедневными записями эмоций
+            </summary>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.CreateEmotionCard(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionCardCreateRequest)">
+            <summary>
+            Создать запись эмоции (не готово!)
+            </summary>
+            <param name="emotionCardRequest">Данные о записи</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.GetEmotionCardForUser">
+            <summary>
+            Получить список карточек-эмоций для текущего пользователя (хэдэр)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.UpdateEmotionCard(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionCardUpdateRequest)">
+            <summary>
+            Обновить карточку с эмоцией
+            </summary>
+            <param name="emotionCardUpdateRequest">Данные об эмоции</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.DeleteEmotionCard(System.Int64)">
+            <summary>
+            Удалить карточку с эмоциями
+            </summary>
+            <param name="cardId">ID каротчки</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController">
+            <summary>
+            Управление эмоциями (справочник)
+            </summary>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController.GetAllEmotions">
+            <summary>
+            Получить весь справочник эмоций
+            </summary>
+            <returns>Справочник эмоций</returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController.CreateEmotion(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionCreateRequest)">
+            <summary>
+            Создать эмоцию
+            </summary>
+            <param name="emotionRequest">Данные об эмоции</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController.UpdateEmotion(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionUpdateRequest)">
+            <summary>
+            Обновить эмоцию в справочнике
+            </summary>
+            <param name="emotionRequest">Новые данные об эмоции</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController.DeleteEmotion(System.Int64)">
+            <summary>
+            Удалить эмоцию из справочника
+            </summary>
+            <param name="emotionId">ID эмоции</param>
+            <returns></returns>
+        </member>
         <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.UserController.GetAllUsers">
             <summary>
             Получить список всех пользователей

@@ -41,6 +41,108 @@ namespace EmotionalCalendar.Backend.WebAPI.Migrations
 
                     b.ToTable("ApplicationUsers");
                 });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.Emotion", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("BlueColor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("DisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("GreenColor")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("RedColor")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique()
+                        .HasFilter("[Name] IS NOT NULL");
+
+                    b.ToTable("Emotions");
+                });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRate", b =>
+                {
+                    b.Property<long>("EmotionId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("EventNoteId")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("EmotionRate")
+                        .HasColumnType("int");
+
+                    b.HasKey("EmotionId", "EventNoteId");
+
+                    b.HasIndex("EventNoteId");
+
+                    b.ToTable("EmotionEventRate");
+                });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.EventNote", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Content")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EventNotes");
+                });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRate", b =>
+                {
+                    b.HasOne("EmotionalCalendar.Backend.Models.EmotionEventModels.Emotion", "Emotion")
+                        .WithMany("EmotionEventRates")
+                        .HasForeignKey("EmotionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EmotionalCalendar.Backend.Models.EmotionEventModels.EventNote", "EventNote")
+                        .WithMany("EmotionEventRates")
+                        .HasForeignKey("EventNoteId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Emotion");
+
+                    b.Navigation("EventNote");
+                });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.Emotion", b =>
+                {
+                    b.Navigation("EmotionEventRates");
+                });
+
+            modelBuilder.Entity("EmotionalCalendar.Backend.Models.EmotionEventModels.EventNote", b =>
+                {
+                    b.Navigation("EmotionEventRates");
+                });
 #pragma warning restore 612, 618
         }
     }

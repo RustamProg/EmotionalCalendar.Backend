@@ -21,8 +21,12 @@ namespace EmotionalCalendar.Backend.WebAPI.Config
                     Title = "EmotionalCalendar.Backend.WebAPI",
                     Description = "Бэкэнд проекта \"Календарь эмоций\"",
                     Contact = new OpenApiContact
-                    { Name = "Rustam Gabdulbarov,\nArtem Sobolev", Email = "emotionalcalendar@hotmail.com" }
+                    { 
+                        Name = "Rustam Gabdulbarov,\nArtem Sobolev", 
+                        Email = "emotionalcalendar@hotmail.com" 
+                    }
                 });
+                c.OperationFilter<SwaggerHeaderFilter>();
                 var filePath = Path.Combine(AppContext.BaseDirectory, "EmotionalCalendar.Backend.WebAPI.xml");
                 c.IncludeXmlComments(filePath);
             });
