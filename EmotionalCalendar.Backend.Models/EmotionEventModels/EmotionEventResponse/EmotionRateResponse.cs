@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventResponse
 {
-    public class EmotionResponse
+    public class EmotionRateResponse
     {
-        public long MyProperty { get; set; }
+        public long EmotionId { get; set; }
+        public int EmotionRate { get; set; }
     }
 }

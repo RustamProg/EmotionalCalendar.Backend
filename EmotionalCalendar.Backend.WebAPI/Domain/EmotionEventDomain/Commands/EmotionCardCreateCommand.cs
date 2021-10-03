@@ -14,7 +14,7 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
 {
     public class EmotionCardCreateCommand : IRequest
     {
-        public EmotionCardRequest DailyEmotionRequest { get; set; }
+        public EmotionCardCreateRequest EmotionCardRequest { get; set; }
     }
 
     public class EmotionCardCreateCommandHandler : IRequestHandler<EmotionCardCreateCommand>
@@ -37,27 +37,35 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
                 throw new ArgumentNullException(nameof(request));
             }
 
-            if (request.DailyEmotionRequest is null)
+            if (request.EmotionCardRequest is null)
             {
                 throw new ArgumentNullException(nameof(request));
             }
 
             var eventNote = new EventNote
             {
-                Title = request.DailyEmotionRequest.EventNoteTitle,
-                Content = request.DailyEmotionRequest.EventNoteContent,
-                CreateDate = request.DailyEmotionRequest.CreateDate,
+                Title = request.EmotionCardRequest.EventNoteTitle,
+                Content = request.EmotionCardRequest.EventNoteContent,
+                CreateDate = request.EmotionCardRequest.CreateDate,
                 UserId = _userService.User.Id,
-                Emotions = new List<Emotion>()
             };
 
-            foreach (var emotion in request.DailyEmotionRequest.Emotions)
+            foreach (var emotionRate in request.EmotionCardRequest.Emotions)
             {
-                var emotionById = await _emotionEventRepository.GetEmotionByIdAsync(emotion.EmotionId);
-                eventNote.Emotions.Add(emotionById);
+                var emotion = await _emotionEventRepository.GetEmotionByIdAsync(emotionRate.EmotionId);
+                var emotionEventRate = new EmotionEventRate
+                {
+                    EventNote = eventNote,
+                    EmotionRate = emotionRate.EmotionRate
+                };
+
+                emotion.EmotionEventRates.Add(emotionEventRate);
+                Validator.ValidateEmotion(emotion);
             }
 
+            Validator.ValidateEventNote(eventNote);
             await _emotionEventRepository.AddEventNoteWithEmotionAsync(eventNote);
+            await _emotionEventRepository.SaveDataAsync();
 
             return Unit.Value;
         }

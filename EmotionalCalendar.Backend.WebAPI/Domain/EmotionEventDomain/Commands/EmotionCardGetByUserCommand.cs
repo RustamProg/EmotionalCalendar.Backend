@@ -33,7 +33,8 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
                 throw new ArgumentNullException(nameof(request));
             }
 
-            var response = await _emotionEventRepository.GetEventNotesWithEmotionsByUserId(_userService.User.Id);
+            var response = await _emotionEventRepository.GetEmotionEventRatesByUser(_userService.User.Id);
+            await _emotionEventRepository.SaveDataAsync();
 
             return response;
         }

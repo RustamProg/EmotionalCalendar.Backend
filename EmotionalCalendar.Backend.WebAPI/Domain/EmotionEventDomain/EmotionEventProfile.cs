@@ -23,10 +23,6 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain
                 .ForMember(dest => dest.RedColor, opt => opt.MapFrom(src => src.RedColor))
                 .ForMember(dest => dest.BlueColor, opt => opt.MapFrom(src => src.BlueColor))
                 .ForMember(dest => dest.GreenColor, opt => opt.MapFrom(src => src.GreenColor));
-
-            CreateMap<EventNoteRequest, EventNote>()
-                .ForMember(dest => dest.Title, opt => opt.MapFrom(src => src.Title))
-                .ForMember(dest => dest.Content, opt => opt.MapFrom(src => src.Content));
         }
     }
 }

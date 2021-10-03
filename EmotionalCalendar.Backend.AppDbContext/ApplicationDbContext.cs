@@ -21,6 +21,19 @@ namespace EmotionalCalendar.Backend.AppDbContext
             modelBuilder.Entity<Emotion>()
                 .HasIndex(p => p.Name)
                 .IsUnique(true);
+
+            modelBuilder.Entity<EventNote>()
+                .HasMany(em => em.Emotions)
+                .WithMany(nt => nt.EventNotes)
+                .UsingEntity<EmotionEventRate>(
+                    j => j
+                        .HasOne(em => em.Emotion)
+                        .WithMany(rt => rt.EmotionEventRates)
+                        .HasForeignKey(em => em.EmotionId),
+                    j => j
+                        .HasOne(nt => nt.EventNote)
+                        .WithMany(rt => rt.EmotionEventRates)
+                        .HasForeignKey(nt => nt.EventNoteId));
         }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }

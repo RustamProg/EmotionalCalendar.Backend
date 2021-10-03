@@ -12,6 +12,6 @@ namespace EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRespon
         public string EmotionEventTitle { get; set; }
         public string EmotionEventContent { get; set; }
         public DateTime CreateDate { get; set; }
-        public IEnumerable<EmotionResponse> Emotions { get; set; }
+        public IEnumerable<EmotionRateResponse> Emotions { get; set; }
     }
 }

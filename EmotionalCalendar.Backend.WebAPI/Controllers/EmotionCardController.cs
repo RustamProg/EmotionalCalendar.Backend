@@ -29,9 +29,9 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
         /// <param name="emotionCardRequest">Данные о записи</param>
         /// <returns></returns>
         [HttpPost]
-        public async Task CreateEmotionCard(EmotionCardRequest emotionCardRequest)
+        public async Task CreateEmotionCard(EmotionCardCreateRequest emotionCardRequest)
         {
-            var command = new EmotionCardCreateCommand { DailyEmotionRequest = emotionCardRequest };
+            var command = new EmotionCardCreateCommand { EmotionCardRequest = emotionCardRequest };
             await _mediator.Send(command);
         }
 
@@ -44,6 +44,30 @@ namespace EmotionalCalendar.Backend.WebAPI.Controllers
         {
             var command = new EmotionCardGetByUserCommand();
             return await _mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Обновить карточку с эмоцией
+        /// </summary>
+        /// <param name="emotionCardUpdateRequest">Данные об эмоции</param>
+        /// <returns></returns>
+        [HttpPut]
+        public async Task UpdateEmotionCard(EmotionCardUpdateRequest emotionCardUpdateRequest)
+        {
+            var command = new EmotionCardUpdateCommand { EmotionCardUpdateRequest = emotionCardUpdateRequest };
+            await _mediator.Send(command);
+        }
+
+        /// <summary>
+        /// Удалить карточку с эмоциями
+        /// </summary>
+        /// <param name="cardId">ID каротчки</param>
+        /// <returns></returns>
+        [HttpDelete("{cardId}")]
+        public async Task DeleteEmotionCard(long cardId)
+        {
+            var command = new EmotionCardDeleteCommand { Id = cardId };
+            await _mediator.Send(command);
         }
     }
 }

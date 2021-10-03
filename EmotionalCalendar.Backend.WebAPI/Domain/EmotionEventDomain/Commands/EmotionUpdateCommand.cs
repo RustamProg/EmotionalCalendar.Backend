@@ -47,7 +47,9 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
             emotion.GreenColor = request.EmotionRequest.GreenColor;
             emotion.BlueColor = request.EmotionRequest.BlueColor;
 
+            Validator.ValidateEmotion(emotion);
             await _emotionEventRepository.UpdateEmotionAsync(emotion);
+            await _emotionEventRepository.SaveDataAsync();
 
             return Unit.Value;
         }

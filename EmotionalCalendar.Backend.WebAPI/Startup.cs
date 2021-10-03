@@ -42,7 +42,7 @@ namespace EmotionalCalendar.Backend.WebAPI
             services.AddControllers();
 
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IEmotionEventRepository, EmotionEventRepository>();
+            services.AddTransient<IEmotionEventRepository, EmotionEventRepository>();
 
             services.AddCors(options =>
             {

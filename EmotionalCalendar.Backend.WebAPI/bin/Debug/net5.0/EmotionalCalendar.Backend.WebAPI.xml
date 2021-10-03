@@ -9,7 +9,7 @@
             Контроллер для работы с ежедневными записями эмоций
             </summary>
         </member>
-        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.CreateEmotionCard(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionCardRequest)">
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.CreateEmotionCard(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionCardCreateRequest)">
             <summary>
             Создать запись эмоции (не готово!)
             </summary>
@@ -20,6 +20,20 @@
             <summary>
             Получить список карточек-эмоций для текущего пользователя (хэдэр)
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.UpdateEmotionCard(EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests.EmotionCardUpdateRequest)">
+            <summary>
+            Обновить карточку с эмоцией
+            </summary>
+            <param name="emotionCardUpdateRequest">Данные об эмоции</param>
+            <returns></returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController.DeleteEmotionCard(System.Int64)">
+            <summary>
+            Удалить карточку с эмоциями
+            </summary>
+            <param name="cardId">ID каротчки</param>
             <returns></returns>
         </member>
         <member name="T:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionController">

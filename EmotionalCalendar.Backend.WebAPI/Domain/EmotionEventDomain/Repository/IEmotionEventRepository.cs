@@ -8,6 +8,7 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
 {
     public interface IEmotionEventRepository
     {
+        Task<IEnumerable<EventNote>> GetEmotionEventRatesByUser(Guid userId);
         Task<IEnumerable<Emotion>> GetAllEmotionsAsync();
         Task<Emotion> GetEmotionByIdAsync(long emotionId);
         Task<Emotion> GetEmotionByNameAsync(string emotionName);
@@ -18,9 +19,10 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
         Task AddEmotionAsync(Emotion emotion);
         Task AddEventNoteWithEmotionAsync(EventNote eventNote);
         Task UpdateEmotionAsync(Emotion emotion);
-        Task UpdateEventNoteWithEmotionAsync(EventNote eventNote);
+        Task UpdateEventNoteWithEmotionAsync(EventNote eventNote, long idToDelete);
         Task DeleteEmotionAsync(long emotionId);
         Task DeleteEventNoteAsync(long eventNoteId);
         Task<IEnumerable<T>> GetWhereAsync<T>(Func<T, bool> predicate) where T : class;
+        Task SaveDataAsync();
     }
 }
