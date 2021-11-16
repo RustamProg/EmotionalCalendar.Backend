@@ -1,0 +1,11 @@
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Notifications.exe
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\appsettings.Development.json
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\appsettings.json
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Notifications.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Notifications.deps.json
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Notifications.runtimeconfig.json
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Notifications.pdb
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\Microsoft.OpenApi.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.Swagger.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Notifications\bin\Debug\net5.0\publish\Swashbuckle.AspNetCore.SwaggerUI.dll

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EmotionalCalendar.Backend.Constracts.EmotionalEventContracts;
 using EmotionalCalendar.Backend.Models.EmotionEventModels;
 using EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository;
@@ -19,12 +20,10 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Commands
     public class EmotionUpdateCommandHandler : IRequestHandler<EmotionUpdateCommand>
     {
         private readonly IEmotionEventRepository _emotionEventRepository;
-        private readonly IMapper _mapper;
 
-        public EmotionUpdateCommandHandler(IEmotionEventRepository emotionEventRepository, IMapper mapper)
+        public EmotionUpdateCommandHandler(IEmotionEventRepository emotionEventRepository)
         {
             _emotionEventRepository = emotionEventRepository;
-            _mapper = mapper;
         }
 
         public async Task<Unit> Handle(EmotionUpdateCommand request, CancellationToken cancellationToken)

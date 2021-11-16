@@ -1,0 +1,5 @@
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Constracts.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Constracts.deps.json
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Constracts.pdb
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Models.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.Constracts\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Models.pdb

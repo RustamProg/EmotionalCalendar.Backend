@@ -4,6 +4,23 @@
         <name>EmotionalCalendar.Backend.WebAPI</name>
     </assembly>
     <members>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.CalendarController.GetCalendarMonth(System.Int32,System.Int32)">
+            <summary>
+            Получить календарный месяц с максимальной эмоцией на дату
+            </summary>
+            <param name="monthNumInYear">Номер месяца</param>
+            <param name="year">Год</param>
+            <returns>Календарный месяц с максимальной эмоцией на дату</returns>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.ChartController.GetChartData(System.DateTime,System.DateTime,System.Int32)">
+            <summary>
+            Получить данные для графика эмоций
+            </summary>
+            <param name="startDate">Начальная дата</param>
+            <param name="endDate">Конечная дата</param>
+            <param name="daysInterval">Интервал на оси Х в днях</param>
+            <returns>Данные для графика</returns>
+        </member>
         <member name="T:EmotionalCalendar.Backend.WebAPI.Controllers.EmotionCardController">
             <summary>
             Контроллер для работы с ежедневными записями эмоций
@@ -66,6 +83,19 @@
             Удалить эмоцию из справочника
             </summary>
             <param name="emotionId">ID эмоции</param>
+            <returns></returns>
+        </member>
+        <member name="T:EmotionalCalendar.Backend.WebAPI.Controllers.MailController">
+            <summary>
+            Контроллер для управления отправкой писем
+            </summary>
+        </member>
+        <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.MailController.SendMail(EmotionalCalendar.Backend.Models.MailModels.EmailModel)">
+            <summary>
+            Тестовый контроллер отправки сообщения по указанному адресу (ПИСЬМО НЕ АНОНИМНОЕ!!!)
+            "email": "vladislavplotnikov54@gmail.com", "password": "21wq34er"
+            </summary>
+            <param name="model">Тело письма</param>
             <returns></returns>
         </member>
         <member name="M:EmotionalCalendar.Backend.WebAPI.Controllers.UserController.GetAllUsers">

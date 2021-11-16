@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using EmotionalCalendar.Backend.Constracts.EmotionalEventContracts;
 using EmotionalCalendar.Backend.Models.EmotionEventModels;
 using EmotionalCalendar.Backend.Models.EmotionEventModels.EmotionEventRequests;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository;
