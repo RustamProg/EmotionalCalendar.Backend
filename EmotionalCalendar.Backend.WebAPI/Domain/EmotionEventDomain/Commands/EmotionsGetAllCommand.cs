@@ -1,4 +1,5 @@
-﻿using EmotionalCalendar.Backend.Models.EmotionEventModels;
+﻿using EmotionalCalendar.Backend.Constracts.EmotionalEventContracts;
+using EmotionalCalendar.Backend.Models.EmotionEventModels;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository;
 using MediatR;
 using System;

@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\gabdu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\gabdu\\.nuget\\packages"
+    ]
+  }
+}

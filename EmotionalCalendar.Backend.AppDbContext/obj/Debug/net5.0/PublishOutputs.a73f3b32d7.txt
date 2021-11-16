@@ -1,0 +1,16 @@
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.AppDbContext.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.AppDbContext.deps.json
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.AppDbContext.pdb
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.EntityFrameworkCore.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.Caching.Memory.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.DependencyInjection.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.Logging.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.Options.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\Microsoft.Extensions.Primitives.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\System.Diagnostics.DiagnosticSource.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Models.dll
+D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\publish\EmotionalCalendar.Backend.Models.pdb

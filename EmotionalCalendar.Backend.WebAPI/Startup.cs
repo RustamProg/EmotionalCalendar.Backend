@@ -20,6 +20,9 @@ using EmotionalCalendar.Backend.WebAPI.Config;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository;
 using AutoMapper;
 using EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using EmotionalCalendar.Backend.Constracts.EmotionalEventContracts;
 
 namespace EmotionalCalendar.Backend.WebAPI
 {

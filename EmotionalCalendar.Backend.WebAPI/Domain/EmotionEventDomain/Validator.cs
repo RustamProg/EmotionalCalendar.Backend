@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain
 {
+    //todo: использовать FluentValidation
     public static class Validator
     {
         public static void ValidateEmotion(Emotion emotion)

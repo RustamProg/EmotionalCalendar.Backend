@@ -1,4 +1,5 @@
 ﻿using EmotionalCalendar.Backend.AppDbContext;
+using EmotionalCalendar.Backend.Constracts.EmotionalEventContracts;
 using EmotionalCalendar.Backend.Models.EmotionEventModels;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -35,6 +36,15 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
         public async Task DeleteEventNoteAsync(long eventNoteId)
         {
             await Task.Run(() => _context.EventNotes.Remove(new EventNote { Id = eventNoteId }));
+        }
+
+        public async Task<IEnumerable<EventNote>> GetEmotionEventRatesByUserAndEmotion(Guid userId, long emotionId)
+        {
+            return await _context.EventNotes
+                .Include(p => p.EmotionEventRates)
+                .ThenInclude(p => p.Emotion)
+                .Where(x => x.EmotionEventRates.Select(p => p.EmotionId).Contains(emotionId))
+                .ToListAsync();
         }
 
         public async Task<IEnumerable<Emotion>> GetAllEmotionsAsync()
@@ -91,6 +101,15 @@ namespace EmotionalCalendar.Backend.WebAPI.Domain.EmotionEventDomain.Repository
                 .AsNoTracking()
                 .Include(x => x.Emotions)
                 .Where(x => x.UserId == userId)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<EventNote>> GetEventNotesWithEmotionsByUserAndEmotionId(Guid userId, long emotionId)
+        {
+            return await _context.EventNotes
+                .AsNoTracking()
+                .Include(x => x.Emotions)
+                .Where(x => x.UserId == userId && x.Emotions.Select(p => p.Id).Contains(emotionId))
                 .ToListAsync();
         }
 

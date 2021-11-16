@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "EmotionalCalendar.Backend.Constracts/1.0.0": {
+        "dependencies": {
+          "EmotionalCalendar.Backend.Models": "1.0.0"
+        },
+        "runtime": {
+          "EmotionalCalendar.Backend.Constracts.dll": {}
+        }
+      },
+      "EmotionalCalendar.Backend.Models/1.0.0": {
+        "runtime": {
+          "EmotionalCalendar.Backend.Models.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmotionalCalendar.Backend.Constracts/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmotionalCalendar.Backend.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

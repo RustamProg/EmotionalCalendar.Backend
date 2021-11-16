@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>EmotionalCalendar.Backend.AppDbContext</id>
+    <version>1.0.0</version>
+    <authors>EmotionalCalendar.Backend.AppDbContext</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="EmotionalCalendar.Backend.Models" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="5.0.10" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\Kpo\Secret\EmotionalCalendar.Backend\EmotionalCalendar.Backend.AppDbContext\bin\Debug\net5.0\EmotionalCalendar.Backend.AppDbContext.dll" target="lib\net5.0\EmotionalCalendar.Backend.AppDbContext.dll" />
+  </files>
+</package>
